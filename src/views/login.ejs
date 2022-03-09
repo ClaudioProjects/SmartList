@@ -1,0 +1,97 @@
+<%- include('includes/head') %>
+<style>
+    .bgSvg{
+        display: none;
+    }
+</style>
+
+<body>
+    <section class="bgSvg">
+        <div class=" containerLogin globalMain">
+
+            <div class='titleMainLogin titleTop'>
+                <div class="listIcon"></div>
+                <h1>SmartList</h1>
+                <p>Sua lista inteligente,</p>
+                <p>feita pra você organizar o seu dia</p>
+            </div>
+
+            <div class="mainFormLogin boxForm">
+                <div class="mainBtnLogin">
+                    <button class="selectLogin">Login</button>
+                    <button class="unSelect toRegister">Cadastro</button> 
+                </div>
+                <%- include('includes/messages') %>
+                <form method="post" action="/login" class="formLogin loginSubmit">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <div class="relative">
+                        <input class="check email" type="email" name="email" autocomplete="off" placeholder="Email" >
+                        <div class="iconDefault emailIcon"></div>
+                    </div>
+                    <div class="relative">
+                        <input class="check" type="password" name="password" autocomplete="off" placeholder="Senha">
+                        <div class="passwordIcon iconDefault"></div>
+                    </div>
+                    <div class="submitLogin">
+                        <a href="#">Esqueci minha senha</a>
+                        <button type="submit">Entrar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="mainFormRegister boxForm">
+                <div class="mainBtnLogin">
+                    <button class="unSelect toLogin">Login</button>
+                    <button class="selectRegister">Cadastro</button>
+                </div>
+                <form method="post" action="/register" class="formLogin registerSubmit">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <div class="relative">
+                        <input class="check name" type="text" name="name" autocomplete="off" autocapitalize="on" placeholder="Primeiro nome">
+                        <div class="iconDefault nameIcon"></div>
+                    </div>
+
+                    <div class="relative">
+                        <input class="check name lastName" type="text" name="lastName" autocomplete="off" autocapitalize="on" placeholder="Sobrenome">
+                        <div class="iconDefault lastNameIcon"></div>
+                    </div>
+
+                    <div class="relative">
+                        <input class="check email" type="email" name="email" autocomplete="off" placeholder="Email">
+                        <div class="iconDefault resgisterEmailIcon"></div>
+                    </div>
+
+                    <div class="relative">
+                        <input class="check password" type="password" name="password" autocomplete="off" placeholder="Senha">
+                        <div class="iconDefault resgisterPasswordIcon"></div>
+                    </div>
+                        
+                    <div class="relative">
+                        <input class="check passwordConfirm" type="password" name="passwordConfirm" autocomplete="off" placeholder="Confirmar senha">
+                        <div class="iconDefault resgisterPasswordConfirmIcon"></div>
+                    </div>
+                    <div class="submitLogin">
+                        <a href="#">Esqueci minha senha</a>
+                        <button type="submit">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class='titleMainLogin titleBottom'>
+                <div class="listIcon"></div>
+                <h1>SmartList</h1>
+                <p>Sua lista inteligente,</p>
+                <p>feita pra você organizar o seu dia</p>
+            </div>
+        </div>
+        <footer class="footerLogin">
+            <p>
+            Feito com <span>❤</span> por Claudio Junior Olimpio
+            </p>
+            <p>
+                claudiojr2002@hotmail.com
+            </p>         
+        </footer>
+    </section>
+    
+<%- include('includes/footer') %>

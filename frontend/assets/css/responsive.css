@@ -1,0 +1,258 @@
+@media (min-width: 1000px) {
+    .titleTop{
+        display: none;
+    }
+}
+
+@media (max-width: 1300px) {
+    .mainList {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 999px) {
+    .containerLogin{
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: center !important;
+        gap: 0;
+    }
+
+    .titleMainLogin h1 {
+        font-size: 7rem;
+        text-align: left;
+        padding-left: 6.5rem;  
+    }
+
+    .listIcon {
+        height: 90px;
+        width: 90px;
+        left: -1.5rem;
+    }
+
+    .titleMainLogin p {
+        text-align: left;
+    }
+
+    .titleBottom {
+        display: none;
+    }
+
+    .titleTop {
+        margin-top: 2.5rem;
+    }
+    .mainList {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .productBox {
+        grid-template-columns: 55% 45%;
+        height: 6rem;
+        padding: 0;
+    }
+    .productBox span {
+        padding: 0.5rem;
+    }
+    .delEstoque, .editEstoque{
+        top: 1.4rem;
+    }
+    .mobileMenu {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .list{
+        padding: 1rem;
+    }
+    .mainList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .mainContentContact, .mainHeader{
+        width: 98%;
+    }
+}
+
+@media(max-width: 730px) {
+    .estoqueBox header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    .productBox {
+        grid-template-columns: 1fr;
+        height: 12rem;
+    }
+
+    .delEstoque {
+        top: auto;
+        bottom: 0.3rem;
+    }
+
+    .editEstoque {
+        top: 0.3rem;
+        right: 0.4rem;
+    }
+}
+
+@media (max-width: 685px){
+    .mainHeader {
+        flex-flow: column;
+        height: 21rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .mainHeader h2 {
+        margin: 1rem;
+        margin-bottom: 0;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 670px){
+    .mobileMenu {
+        width: 100%;
+        display: block;
+    }
+    .mobileContent {
+        display: none;
+    }
+    .boxInputTask {
+        margin-right: 9rem;
+    }
+    .boxInputTask #task{
+        font-size: 1.2rem;
+    }
+    .inputTime{
+        left: 3rem;
+    }    
+    .mainRatio{
+        font-size: 1.5rem;
+        right: 0.8rem;
+        top: 0.2rem;
+    }
+    .btnClose {
+        height: 5rem;
+        width: 5rem;
+        background: red;
+        position: absolute;
+        right: -2.2rem;
+        top: -2.2rem;
+        border-radius: 50%;
+    }
+    
+    .btnClose::after {
+        position: absolute;
+        right: 1.8rem;
+        top: 1.8rem;
+        z-index: 2;
+    }
+
+    .modal {
+        height: 44rem;
+        width: 23rem;
+    }
+
+    .modal h2 {
+        font-size: 2.7rem;
+    }
+
+    .estoqueForm {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 8rem);;
+    }
+    .estoqueBox header {
+        grid-template-columns: 1fr;
+    }
+    .textBoxContact{
+        font-size: 1.4rem;
+    }
+
+    .subTitle{
+        font-size: 1.6rem;
+    }
+    .subTitle+span{
+        font-size: 1rem;
+    }
+    .subTitle+a{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 528px){
+    .textBox h2 {
+        font-size: 11vw;
+    }
+    .textBox p {
+        font-size: 1.4rem;
+    }
+    .mainList {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .boxInputTask>.error-text{
+        position: static;
+    }
+}
+
+@media (max-width: 455px) {
+
+    .titleMainLogin{
+        width: 95%;
+        padding-left: 0.8rem;
+    }
+
+    .titleMainLogin h1{
+        font-size: 17vw;
+        padding-left: 17vw;   
+    }
+
+    .titleMainLogin p{
+        font-size: 1.8rem;
+    }
+
+    .listIcon {
+        height: 22vw;
+        width: 22vw;
+        top: -0.3rem;
+        left: -0.2rem;
+    }
+
+    .formLogin {
+        width: 100%;
+    }
+
+    .boxForm {
+        width: 90%;
+    }
+}
+
+@media (max-width: 378px) {
+    .modal {
+        right: 41%;
+    }
+}
+
+@media (max-height: 900px) {
+    .mainNavFunction {
+        margin-top: 7rem;
+    }
+    .functionHome {
+        margin-top: 1.5rem;
+    }
+    .acountBox{
+        width: 100px;
+        height: 100px;
+        margin-top: 2rem;
+    }
+
+    .logoutBox {
+        margin-bottom: 7rem;
+    }
+    .menuCloseBox {
+        right: -0.3rem;
+        top: 15.2rem;
+    }
+}

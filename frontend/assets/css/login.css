@@ -1,0 +1,228 @@
+body::-webkit-scrollbar {
+    width: 1rem;
+    background-color: #11001F;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-mainLogin);
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar-track {
+    border: 1px solid #c32530;
+    background-color: #11001F;
+    border-radius: 3rem;
+}
+
+.containerLogin{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    min-height: 90vh;
+}
+
+.mainFormLogin {
+    display: block;
+    margin-top: 10rem;
+}
+
+.mainFormRegister {
+    display: none;
+}
+
+.mainBtnLogin {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
+    display: flex;
+    flex-flow: row;
+    width: 18rem;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.mainBtnLogin button{
+    background: none;
+    border: 0;
+    color: var(--bg-contrast);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.mainBtnLogin .unSelect {
+    color: rgba(255, 255, 255, 0.616);
+}
+
+.mainBtnLogin .selectLogin::before {
+    content: '';
+    position: absolute;
+    background: var(--color-mainLogin);
+    height: 0.4rem;
+    width: 40%;
+    left: -0.8rem;
+    top: 2.6rem;
+    border-radius: 0 15px 0 15px;
+}
+
+.mainBtnLogin .selectRegister::before {
+    content: '';
+    position: absolute;
+    background: var(--color-mainLogin);
+    height: 0.4rem;
+    width: 63%;
+    right: -0.8rem;
+    top: 2.6rem;
+    border-radius: 0 15px 0 15px;
+}
+
+.formLogin {
+    display: flex;
+    flex-flow: column;
+    width: 40rem;
+    position: relative;
+}
+
+.formLogin input {
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--color-mainLogin);
+    color: var(--bg-contrast);
+    width: 100%;
+    margin-top: 2.7rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.formLogin input:focus {
+    outline: 0;
+}
+
+.formLogin input::placeholder {
+    margin-bottom: 1rem;
+}
+
+.submitLogin {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.submitLogin button {
+    font-family: 'Roboto Mono', monospace;
+    width: 15rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    border-radius: 7rem;
+    border: 0;
+    background: #c32530;
+    color: #fff;
+}
+
+.submitLogin a {
+    position: relative;
+    top: 1.3rem;
+    font-size: 1.3rem;
+    color: #c32530;
+}
+
+.titleMainLogin {
+    width: 40rem;
+    /* height: 31rem; */
+    text-align: right;
+    position: relative;
+}
+
+.titleMainLogin h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 8rem;
+    color: var(--color-mainLogin);
+    text-align: right;
+}
+
+.titleMainLogin p {
+    font-size: 2.5rem;
+}
+
+.titleBottom {
+    margin-bottom: 3rem;
+}
+
+.iconDefault {
+    position: absolute;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    top: 1.2rem;
+    right: 1rem;
+}
+.nameIcon{
+    background-image: url('../img/userSvg.svg');
+}
+
+.lastNameIcon {
+    background-image: url('../img/userSvg.svg');
+}
+
+.resgisterEmailIcon {
+    background-image: url('../img/emailSvg.svg');
+}
+
+.resgisterPasswordIcon {
+    background-image: url('../img/passwordSvg.svg');
+}
+
+.resgisterPasswordConfirmIcon {
+    background-image: url('../img/passwordSvg.svg');
+}
+
+.emailIcon {
+    background-image: url('../img/emailSvg.svg');
+}
+
+.passwordIcon {
+    background-image: url('../img/passwordSvg.svg');
+}
+
+.listIcon {
+    background-image: url('../img/listSvg.svg');
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    position: absolute;
+    left: -5rem;
+}
+
+
+.footerLogin {
+    text-align: center;
+    font-size: 1.2rem;
+    width: 100%;
+    color: var(--color-mainLogin);
+    margin-top: 5vh;
+    height: 5vh;
+}
+
+.footerLogin div {
+    position: absolute;
+    bottom: 1.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.error-text {
+    color: var(--color-mainLogin);
+    font-size: 1.4rem;
+    padding-left: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.relative {
+    width: 100%;
+    position: relative;
+}

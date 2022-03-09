@@ -1,0 +1,35 @@
+<%- include('includes/head')%>
+    <style>
+        .fastload {
+            display: none;
+        }
+
+    </style>
+
+<body>
+    <%- include('includes/sidebar') %>
+            <section class="bgSvg mainCreateForm marginLeftMenu">
+                <div class="formCreateBox">
+                    <% let name = [] %>
+                    <% for (let i of lista) name.push(i.nameList) && name.push(i.date) %>
+                    <form class="formCreate formEdit" action="/edit/<%= name[0] %>" method="post">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <div class="box">
+                            
+                            <div class="inputCreate">
+                                <label class="label" for="nameList">Nome</label>
+                                <input type="text" class="textInput" name="nameList" id="nameList" autocomplete="off" value="<%= lista[0].nameList %>">
+                            </div>
+                            
+                            <%- include('includes/viewList') %>
+
+                        </div>
+                        <div class="mainBtn"> 
+                            <button type='button' class="addInput"></button> 
+                            <button type="submit" class="submitBtn"></button>  
+                        </div>                
+                    </form>
+                </div>  
+        </section>
+    </section>
+<%- include('includes/footer')%>

@@ -1,0 +1,60 @@
+<%- include('includes/head') %>
+
+    <style>
+        .fastload {
+            display: none;
+        }
+
+    </style>
+
+<body>
+    <%- include('includes/sidebar') %>
+        <section class="bgSvg mainCreateForm marginLeftMenu">
+                <div class="formCreateBox">
+                    <form class="formCreate formList" action="/home/createList/create" method="post">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <div class="box">
+                            
+                            <div class="inputCreate">
+                                <label class="label" for="nameList">Nome</label>
+                                <input type="text" class="textInput" name="nameList" id="nameList" autocomplete="off" autofocus='on'>
+                            </div>
+            
+                            <div class="taskCreate estudos">
+                                <label for="check" class="checkTaskBox"></label>
+                                <input type="checkbox" class="checkTask displayNone" id="check">
+                                <input type="hidden" class='hidden' name="check" value="false">
+                                <div class="boxInputTask">
+                                    <input class="textInput" type="text" name="task" id="task" autocomplete="off"> 
+                                </div>
+            
+                                <div class="inputTime">
+                                    <p class="label">Hora:</p>
+                                    <input type="time" id="time" name="time" required>
+                                </div>
+            
+                                <div class="mainRatio">
+                                    <div class="relative">
+                                        <input type="radio" id="text" name="type" value="estudos"  class="radio type" checked>
+                                        <span>Estudos</span>  
+                                    </div>
+                                    <div class="relative">
+                                        <input type="radio" id="video" name="type" value="tarefas" class="radio type">
+                                        <span>Tarefas</span>  
+                                    </div>
+                                    <div class="relative">
+                                        <input type="radio" id="arquivo" name="type" value="lazer" class="radio type">
+                                        <span>Lazer</span>  
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="mainBtn"> 
+                            <button type='button' class="addInput"></button> 
+                            <button type="submit" class="submitBtn"></button>  
+                        </div>                
+                    </form>
+                </div>  
+        </section>
+    </section>
+<%- include('includes/footer') %>

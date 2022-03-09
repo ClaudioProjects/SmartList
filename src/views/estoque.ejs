@@ -1,0 +1,78 @@
+<%- include('includes/head')%>
+    <style>
+        .fastload {
+            display: none;
+        }
+
+    </style>
+
+<body>
+    <%- include('includes/sidebar') %>
+    <div class="marginLeftMenu homeBox estoqueBox">
+        <h2 class="titleEstoque">Estoque</h2> 
+        <%- include('includes/products') %>
+
+        <div class="modal displayNone reg">
+            <h2 class="titleModal">Cadastro de produtos</h2>
+            <button type="button" class="closeModal"></button>
+            <form class="estoqueForm" action="/estoque/save" method="post">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <div>
+                    <label>Nome do produto</label>
+                    <input type="text" autocomplete="off" name="name" class="check">
+                </div>
+            
+                <div>
+                    <label>Codigo</label>
+                    <input type="text" autocomplete="off" name="code" class="check">  
+                </div>
+
+                <div>
+                    <label>Quantidade</label>
+                    <input type="number" autocomplete="off" name="unity" class="check" min="1"> 
+                </div>
+
+                <div>
+                    <label>Valor em reais por unidade</label>
+                    <input type="text" autocomplete="off" name="value" class="check value"> 
+                </div>
+
+                <button type="submit" class="btnModal">Cadastrar</button>
+            </form>
+        </div>
+
+        <div class="modal displayNone">
+            <h2 class="titleModal">Edição de produto</h2>
+            <button type="button" class="closeModal"></button>
+            <form class="estoqueForm" method="post">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <div>
+                    <label>Nome do produto</label>
+                    <input type="text" autocomplete="off" name="name" class="check name">
+                </div>
+            
+                <div>
+                    <label>Codigo</label>
+                    <input type="text" autocomplete="off" name="code" class="check code">  
+                </div>
+
+                <div>
+                    <label>Quantidade</label>
+                    <input type="number" autocomplete="off" name="unity" class="check unity" min="1"> 
+                </div>
+
+                <div>
+                    <label>Valor em reais por unidade</label>
+                    <input type="text" autocomplete="off" name="value" class="check value"> 
+                </div>
+
+                <button type="submit" class="btnModal">Cadastrar</button>
+            </form>
+        </div>
+        <button type="button" class="openModal">Novo produto</button>
+    </div>
+
+    
+    
+    </section>
+<%- include('includes/footer')%>

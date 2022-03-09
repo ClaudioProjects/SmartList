@@ -1,0 +1,16 @@
+<% let name = []%>
+<% for (let i of listas) { %>
+    <% if (!name.includes(i.nameList)) { %>
+        <% name.push(i.nameList)%>
+        <div class="listBox">
+            <a class="entryList" href="/list/<%= i.nameList %>">
+                <div class="imgList"></div>
+                <span class="txtList"><%= i.nameList %> </span>
+            </a>
+            <a class="delList" href="/delete/<%= i.nameList %>"></a>
+        </div>
+    <% } %>
+<% } %>
+<% if (name.length === 0 ) { %>
+    <div class='listZero'>Nenhuma lista encontrada</div>
+<% } %>

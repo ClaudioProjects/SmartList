@@ -1,0 +1,44 @@
+<section class="fastload mainHome">
+    <nav class="mainHomeNav">
+        <h2 class="absoluteH2">SmartList</h2>
+        <div class="acountBox opacity0"></div>
+        <div class="welcomeAcount displayNone">Seja bem vindo, <%= name %></div>
+
+        <div class="mainNavFunction">
+
+            <div class="relative home functionHome">
+                <div class="iconDefaultHome homeIcon"></div>
+                <a href="/home" class="taskHome opacity0">Ir para Home</a>
+            </div>
+
+            <div class="relative myAcount functionHome">
+                <div class="iconDefaultHome settingsHome"></div>
+                <a class="taskHome opacity0" href="/contato">Contato</a>
+            </div>
+
+            <div class="relative myListBox functionHome">
+                <div class="iconDefaultHome myList"></div>
+                <a class="taskHome opacity0" href="/lists/<%= user._id %>">Minhas Listas</a>
+            </div>
+
+            <div class="relative addListBox functionHome">
+                <div class="iconDefaultHome addList"></div>
+                <a href="/home/createList" class="taskHome opacity0">Adicionar Lista</a>
+            </div>
+
+            <div class="relative myStockBox functionHome">
+                <div class="iconDefaultHome myStock"></div>
+                <a class="taskHome opacity0" href="/estoque">Meu Estoque</a>
+            </div>
+
+            <div class="absolute">
+                <div class="relative logoutBox functionHome">
+                    <div class="iconDefaultHome logout"></div>
+                    <a class="taskHome opacity0" href="/logout">Sair</a>
+                </div>
+            </div> 
+        </div>
+        <label for="menuClose" class="menuCloseBox">
+            <input type="checkbox" id="menuClose" class="displayNone">
+        </label>
+    </nav>

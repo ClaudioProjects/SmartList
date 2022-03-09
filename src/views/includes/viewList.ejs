@@ -1,0 +1,33 @@
+<% let altName = 0 %>
+<% for (let i of lista) { %>
+    <% altName += 1 %>
+    <div class="taskCreate <%= i.type %>">
+        <label for="check<%= altName %>" class="checkTaskBox"></label>
+        <input type="checkbox" class="checkTask displayNone" id="check<%= altName %>">
+        <input type="hidden" class='hidden' name="check<%= altName %>" value="<%= i.check %>">
+        <div class="boxInputTask">
+            <input class="textInput" type="text" name="task<%= altName%>" id="task" autocomplete="off" value="<%= i.task %>"> 
+        </div>
+
+        <div class="inputTime">
+            <p class="label">Hora:</p>
+            <input type="time" id="time" name="time<%= altName%>" required value="<%= i.time %>">
+        </div>
+
+        <div class="mainRatio">
+            <div class="relative">
+                <input type="radio" id="Estudos" name="type<%= altName%>" value="estudos"  class="radio type estudos" >
+                <span>Estudos</span>  
+            </div>
+            <div class="relative">
+                <input type="radio" id="Tarefas" name="type<%= altName%>" value="tarefas" class="radio type tarefas">
+                <span>Tarefas</span>  
+            </div>
+            <div class="relative">
+                <input type="radio" id="Lazer" name="type<%= altName%>" value="lazer" class="radio type lazer">
+                <span>Lazer</span>  
+            </div>
+        </div>
+        <button class="btnClose" type="button"></button>
+    </div>
+<% } %> 

@@ -1,0 +1,63 @@
+.list {
+    width: 100%;
+}   
+
+.mainList {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.listBox {
+    font-size: 1.3rem;
+    height: 5rem;
+    border: 1.5px solid var(--color-mainLogin);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background: var(--color-mainLogin);
+    margin: 2rem 1.3rem 0rem 1.3rem;
+    color: #11001F;
+}
+
+.entryList{
+    width: 90%;
+    display: flex;
+    height: 100%;
+    text-decoration: none;
+    border-right: 2px solid black;
+}
+
+.delList{
+    width: 10%;
+}
+
+.listBox .imgList {
+    background-image: url('../img/openList.svg');
+    background-size: cover;
+    height: 4rem;
+    width: 4rem;
+    margin-right: 1rem;
+}
+
+.listBox .txtList {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 500;
+    padding-left: 1.5rem;
+    border-left: 2px solid black;
+    height: 100%;
+    padding-top: 0.5rem;
+    color: #fff;
+}
+
+.delList {
+    background-image: url('../img/deleteList.svg');
+    background-size: cover;
+    height: 4rem;
+    width: 4rem;
+}
+
+.listZero{
+    font-size: 2rem;
+    color: #fff;
+}
+

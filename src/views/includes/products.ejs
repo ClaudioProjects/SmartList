@@ -1,0 +1,18 @@
+<% if (estoque.length > 0) { %>
+    <header>
+    <%for (let i of estoque) { %>
+        <div class="productBox relative">
+            <span><span class="textDark">Nome: </span> <%=i.name%></span>
+            <span><span class="textDark">Código: </span> <%=i.code%></span>
+            <span><span class="textDark">Quantidade: </span> <%=i.unity%></span>
+            <span><span class="textDark">Valor:</span> R$ <%=i.value.toFixed(2) %></span>
+            <a href="/deleteEstoque/<%= i._id %>" class="delEstoque"></a>
+            <input type="hidden" class="idProduct" value="<%= i._id %>">
+            <button type="button" class="editEstoque"></button>
+        </div>
+    <% } %>
+    </header>
+    <div class="total"></div>
+<% } else { %>
+    <p>Nenhum produto encontrado</p>
+<% } %>

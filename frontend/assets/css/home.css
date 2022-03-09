@@ -1,0 +1,34 @@
+.homeBox{
+    margin-left: 30rem;
+    display: block;
+    width: 100%;
+}
+
+.headerHome {
+    height: 100vh;
+    color: #fff;
+    width: 100%;
+    display: block;
+    background: #11001F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textBox {
+    padding: 3rem;
+}
+
+.textBox h2 span {
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--color-mainLogin);
+}
+
+.textBox h2 {
+    font-size: 7rem;
+}
+
+.textBox p {
+    font-size: 2rem;
+    padding-left: 0.3rem;
+}

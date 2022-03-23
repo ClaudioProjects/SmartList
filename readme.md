@@ -1,6 +1,6 @@
 # Smartlist 
 
-Smartlist é um CRUD, que funcioma como uma lista de tarefas e um estoque também, tecnologias utlizadas: Javascript, html, css, nodejs, express, mongodb, axios e validator 
+Smartlist é um CRUD, que funcioma como uma lista de tarefas e um estoque também, tecnologias utlizadas: Javascript, html, css, nodejs, express, mongodb, axios, nginx e validator 
 
 # Video de apresentação
 
